@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Sidebar from "./components/Sidebar";
+import Home from "./pages/Home";
+import History from "./pages/History";
+import Saved from "./pages/Saved";
+import Quiz from "./pages/Quiz";
+import "./styles/main.css";
+import "./App.css";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="app-layout">
+        <Sidebar />
+        <main className="app-main">
+          <Routes>
+            <Route path="/"        element={<Home />} />
+            <Route path="/history" element={<History />} />
+            <Route path="/saved"   element={<Saved />} />
+            <Route path="/quiz"    element={<Quiz />} />
+          </Routes>
+        </main>
+      </div>
+
+      <footer className="pf-footer">
+        Powered by <span className="pf-footer-brand">Harrine.Dev</span>
+      </footer>
+    </BrowserRouter>
   );
 }
-
-export default App;

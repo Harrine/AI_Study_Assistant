@@ -1,0 +1,39 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.home-header {
+  padding: 2rem 1.5rem 1.25rem;
+  border-bottom: 0.5px solid var(--border);
+  animation: fadeUp 0.5s ease both;
+}
+
+.home-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0.5rem 0 0.4rem;
+}
+
+.home-title em {
+  font-style: italic;
+  color: var(--muted);
+}
+
+.home-sub {
+  font-size: 12px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+}
+
+.chat-window {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}

@@ -1,0 +1,90 @@
+.input-area {
+  padding: 0 1.5rem 1.5rem;
+  border-top: 0.5px solid var(--border);
+  background: var(--bg);
+}
+
+/* ── Suggestions ── */
+.suggestions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 1rem 0 0.75rem;
+}
+
+.suggestion-chip {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 100px;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+
+.suggestion-chip:hover {
+  color: var(--accent2);
+  border-color: var(--accent2);
+}
+
+/* ── Input row ── */
+.input-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  transition: border-color 0.2s;
+}
+
+.input-row:focus-within {
+  border-color: rgba(200, 245, 71, 0.3);
+}
+
+.question-textarea {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.6;
+  resize: none;
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+.question-textarea::placeholder {
+  color: var(--muted);
+}
+
+.question-textarea:disabled {
+  opacity: 0.5;
+}
+
+.input-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.icon-btn {
+  padding: 7px 10px;
+  font-size: 15px;
+  border-radius: 6px;
+}
+
+.send-btn {
+  padding: 8px 16px;
+  font-size: 13px;
+  border-radius: 6px;
+  min-width: 72px;
+  justify-content: center;
+}

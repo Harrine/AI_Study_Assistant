@@ -1,0 +1,151 @@
+.page-content {
+  padding: 2rem 1.5rem 4rem;
+  max-width: 720px;
+  width: 100%;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0.5rem 0 0.4rem;
+}
+
+.page-sub {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ── State messages ── */
+.state-msg {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--muted);
+  padding: 1rem 0;
+  font-family: var(--font-mono);
+}
+
+.state-msg.error {
+  color: var(--danger);
+}
+
+/* ── History list ── */
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.history-card {
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.history-card.open,
+.history-card:hover {
+  border-color: var(--border-h);
+}
+
+.history-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  cursor: pointer;
+  gap: 12px;
+}
+
+.history-q {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.history-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(200, 245, 71, 0.08);
+  border: 0.5px solid rgba(200, 245, 71, 0.25);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.history-qtext {
+  font-size: 13px;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.history-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.history-date {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.history-chevron {
+  font-size: 9px;
+  color: var(--muted);
+}
+
+/* ── Answer panel ── */
+.history-answer {
+  padding: 14px 16px 16px;
+  border-top: 0.5px solid var(--border);
+  background: var(--card2);
+}
+
+.answer-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
+.answer-text {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.delete-btn {
+  font-size: 12px;
+  padding: 6px 14px;
+  color: var(--danger);
+  border-color: rgba(255, 80, 80, 0.25);
+}
+
+.delete-btn:hover {
+  color: var(--danger);
+  border-color: rgba(255, 80, 80, 0.5);
+  background: var(--danger-bg);
+}
